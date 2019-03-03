@@ -106,11 +106,11 @@ p {
   width: 33px;
 }
 
-.header__container > .article__container {
+.article__container {
   text-align: center;
   margin-top: 65px;
 }
-.header__container > .article__container > .description_text {
+.article__container > .description_text.headers {
   padding: 10px 40px;
 }
 
@@ -133,6 +133,7 @@ p {
   font-family: PT_Mono-Bold;
   font-size: 16px;
   margin-bottom: 15px;
+  background-color: transparent;
 }
 .btn:hover {
   color: #34CC99;
@@ -168,6 +169,25 @@ p {
 }
 .btn + .white:active {
   box-shadow: none;
+}
+
+
+
+
+.concepts > .article__container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.concepts > .article__container > svg {
+  fill: #34CC99;
+  width: 28px;
+}
+.article__container > .description_text {
+  padding: 0 11px;
+}
+
+.description_title {
+  margin: 5px 0;
 }
 
 
