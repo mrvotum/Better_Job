@@ -1,10 +1,11 @@
 body {
-	font-family: OpenSans-Regular;
+	font-family: PT_Mono-Regular;
 	padding: 0;
 	margin: 0;
   position: relative;
   overflow-x: hidden;
   font-size: 16px;
+  min-width: 290px;
 }
 
 h1 {
@@ -28,8 +29,6 @@ p {
 
 .header {
   width: 100%;
-  min-width: 260px;
-  /*height: 568px;*/
   position: relative;
 
   background-image: url(../img/tower_mobile.jpg);
@@ -56,6 +55,8 @@ p {
 
 .top_holder {
   padding-top: 35px;
+  padding-left: 20px;
+  padding-right: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -63,10 +64,9 @@ p {
 
 .article_title {
   background-color: #34CC99;
-  display: block;
+  display: inline-block;
   padding: 3px 0px;
   box-sizing: border-box;
-  margin-left: 22px;
 }
 .article_title:before {
   content: "+";
@@ -88,7 +88,6 @@ p {
   height: 18px;
   stroke: #000;
   stroke-width: 2px;
-  margin-right: 15px;
 }
 
 .icons_holder {
@@ -114,7 +113,7 @@ p {
   padding: 10px 40px;
 }
 
-.button__container {
+.header__container > .button__container {
   margin-top: 31px;
 }
 .button__container > form {
@@ -139,14 +138,14 @@ p {
   color: #34CC99;
   border-color: #34CC99;
 }
-.btn + .green {
+.btn.green {
   color: #fff;
   border-color: #34CC99;
   background-color: #34CC99;
   width: 282px;
   box-shadow: 8px 8px 0px rgba(0,0,0,1);
 }
-.btn + .green:hover {
+.btn.green:hover {
   color: #fff;
   border-color: #000;
   background-color: #000;
@@ -155,19 +154,19 @@ p {
 /*.btn + .green:active {
   box-shadow: none;
 }*/
-.btn + .white {
+.btn.white {
   color: #000;
   border-color: #fff;
   background-color: #fff;
   box-shadow: 7px 7px 0px #000;
 }
-.btn + .white:hover {
+.btn.white:hover {
   color: #fff;
   border-color: #000;
   background-color: #000;
   box-shadow: 7px 7px 0px #fff;
 }
-.btn + .white:active {
+.btn.white:active {
   box-shadow: none;
 }
 
@@ -177,18 +176,86 @@ p {
 .concepts > .article__container {
   margin-top: 30px;
   margin-bottom: 30px;
+  padding-left: 11px;
+  padding-right: 11px;
 }
 .concepts > .article__container > svg {
   fill: #34CC99;
-  width: 28px;
+  width: 40px;
 }
-.article__container > .description_text {
+/*.article__container > .description_text {
   padding: 0 11px;
-}
+}*/
 
 .description_title {
   margin: 5px 0;
 }
+
+
+.about_program {
+  background: url(../img/Bundesarchiv_mobile.png) no-repeat;
+  background-size: cover;
+  top: 0;
+  background-color: #696969;
+  position: relative;
+}
+.about_program:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #fff 40%, transparent);
+  top: 0;
+}
+
+.about_program > .article__container{
+  position: relative;
+}
+
+.article_text {
+  padding-top: 40px;
+}
+
+.left-align{
+  text-align: left;
+  padding: 41px 17px;
+  margin-top: 0;
+}
+
+
+
+.charts__holder{
+  counter-reset: kek;
+}
+
+.important_message__holder {
+  border: 2px solid #000;
+  box-shadow: 0px 18px 0px -9px #000;
+  padding: 16px 10px;
+  margin-top: 30px;
+}
+
+.chart_block{
+  position: relative;
+  width: 280px;
+  padding: 12px 40px;
+  box-sizing: border-box;
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.chart_block:before{
+  position: absolute;
+  counter-increment: kek; /* Увеличиваем значение счетчика */
+  content: counter(kek); /* Выводим число */
+  font-size: 48px;
+  font-family: 'PT_Mono-Bold';
+  color: #34CC99;
+  top: 0;
+  z-index: -1;
+}
+
 
 
 
