@@ -11,7 +11,18 @@
 	<div class="header__container">
 		<div class="top_holder">
 			<h2 class="article_title">betterjob</h2>
-			<svg class="burgers" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18"><line x1="1" y1="1" x2="25" y2="1"/><line x1="1" y1="9" x2="25" y2="9"/><line x1="1" y1="17" x2="25" y2="17"/></svg>
+			<div class="holder">
+				<a href="#" class="menu-btn">
+					<span class="burger_lines"></span>
+				</a>
+				<nav class="links">
+					<a href="#">BetterJob</a>
+					<a href="#about_program">О программе</a>
+					<a href="#how_it_works">Как это работает</a>
+					<a href="#why_berlin">Почему Берлин</a>
+					<a href="#the_crew">Команда</a>
+				</nav>
+			</div>
 		</div>
 		<div class="icons_holder">
 			<svg id="ic_person" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.15 26.79"><path d="M20.52,25.07c-4.36,0-13.07,2.23-13.07,6.66v3.33H33.6V31.73C33.6,27.3,24.89,25.07,20.52,25.07Zm0-3.33a6.6,6.6,0,0,0,6.54-6.66h0A6.54,6.54,0,1,0,14,14.56q0,0.26,0,.51a6.6,6.6,0,0,0,6.53,6.66h0Z" transform="translate(-7.45 -8.27)"/></svg>
@@ -37,6 +48,8 @@
 	</div>
 </header>
 
+
+
 <main class="content">
 	<div class="content__block concepts">
 		<div class="article__container">
@@ -58,14 +71,14 @@
 		</div>
 	</div>
 
-	<div class="content__block about_program">
+	<div class="content__block about_program" id="about_program">
 		<div class="article__container left-align">
 			<h2 class="article_title">О программе</h2>
 			<p class="article_text">Европе нужны IT-профессионалы, вменяемые и работоспособные люди. Мы умеем и любим находить для таких людей новое лучшее место для работы и жизни. Платят нам за это работодатели, а не кандидаты.</p>
 		</div>
 	</div>
 
-	<div class="content__block how_it_works">
+	<div class="content__block how_it_works" id="how_it_works">
 		<div class="article__container left-align">
 			<h2 class="article_title">Как это работает</h2>
 			<div class="charts__holder">
@@ -102,24 +115,28 @@
 		</div>
 	</div>
 
-	<div class="content__block why_berlin">
+	<div class="content__block why_berlin" id="why_berlin">
 		<div class="article__container left-align">
 			<h2 class="article_title">Почему Берлин</h2>
 			<p class="article_text">Берлин -- Это Силиконовая Долина Европы, но пока ещё со вменяемыми ценами на жизнь. Тысячи стартапов. Сотни театров. Десятки озёр. Свяжитесь с нами, и за час мы вам расскажем всё, что вам надо знать об этом городе.</p>
 		</div>
 	</div>
 	
-	<dvi class="LOLKEK"> <!-- ТУТ ПОКА ПРОСТО ЗАГЛУШКА!!!!!! -->
-		<div class="carusel">
-			<!-- <picture class="block__image_about">
-				<source media="(max-width: 640px)" srcset="img/trains_mobile.jpg">
-				<source media="(min-width: 641px)" srcset="img/trains.png">
-				<img src="img/trains.png" alt="be active" id="be-active">
-			</picture> -->
-		</div>
-	</dvi>
+	<div class="slider">
+		<input type="radio" name="s" class="radio-btn" id="slide_1">
+		<input type="radio" name="s" class="radio-btn" id="slide_2">
+		<input type="radio" name="s" class="radio-btn" id="slide_3" checked>
+		<input type="radio" name="s" class="radio-btn" id="slide_4">
+		<input type="radio" name="s" class="radio-btn" id="slide_5">
 
-	<div class="content__block the_crew">
+		<div class="slide" id="num1"></div>
+		<div class="slide" id="num2"></div>
+		<div class="slide" id="num3"></div>
+		<div class="slide" id="num4"></div>
+		<div class="slide" id="num5"></div>
+	</div>
+
+	<div class="content__block the_crew" id="the_crew">
 		<div class="article__container left-align">
 			<h2 class="article_title">Команда</h2>
 			<p class="article_text">Мы сами переезжали и меняли работу много раз и знаем, какой это стресс.
