@@ -1,7 +1,7 @@
 body {
-	font-family: PT_Mono-Regular;
-	padding: 0;
-	margin: 0;
+  font-family: PT_Mono-Regular;
+  padding: 0;
+  margin: 0;
   position: relative;
   overflow-x: hidden;
   font-size: 16px;
@@ -16,7 +16,7 @@ h1 {
 }
 
 h2 {
-	font-family: PT_Mono-Bold;
+  font-family: PT_Mono-Bold;
   font-size: 18px;
   padding: 0;
   margin: 0;
@@ -144,6 +144,7 @@ p {
   background-color: #34CC99;
   width: 282px;
   box-shadow: 8px 8px 0px rgba(0,0,0,1);
+  z-index: 1;
 }
 .btn.green:hover {
   color: #fff;
@@ -360,8 +361,8 @@ p {
   background-color: #000;
   width: 29px;
   height: 2px;
-  top: 50%; margin-top: -1px; /* половина от высоты */
-  left: 50%; margin-left: -14.5px; /* половина от ширины */
+  top: calc(50% - 1px); /* margin-top: -1px; /* половина от высоты */
+  left: calc(50% - 14.5px); /* margin-left: -14.5px; /* половина от ширины */
 }
 .menu-btn .burger_lines::before,
 .menu-btn .burger_lines::after {
@@ -374,35 +375,44 @@ p {
   transform: translateY(6px);
 }
 
-/*.menu-btn:focus > .burger_lines{
-  transform: rotate(45deg);
+.menu-btn:focus > .burger_lines{
   transition: .5s all;
+  background-color: transparent;
+  /*z-index: 5;*/
 }
-.menu-btn:focus > .burger_lines:before{
-  transform: translateY(0px);
+/* АНИМАЦИЯ БУРГЕРОВ */
+/*.menu-btn:focus > .burger_lines:before,
+.menu-btn:focus > .burger_lines:after {
+  width: 20px;
+  transition: .5s all;
+  margin-left: 5px;
+  border-radius: 50px;
 }
 .menu-btn:focus > .burger_lines:after{
-  transform: translateY(0px);
-  transform: rotate(90deg);
+  transform: rotate(45deg);
+}
+.menu-btn:focus > .burger_lines:before {
+  transform: rotate(-45deg);
 }*/
 
-
 .menu-btn:focus ~ .links {
+  transition: .5s all;
+  transform: translateX(100%);
+}
+
+.links{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.links{
-  display: none;
   position: fixed;
   background-color: #34CC99;
   width: 100vw;
   height: 100vh;
-  z-index: 10;
-  left: 0;
+  z-index: 4;
+  left: -100vw;
   top: 0;
+  transition: .5s all;
 }
 .links > a{
   text-decoration: none;
@@ -433,7 +443,7 @@ p {
   padding-top: 220px;
   position: relative;
   margin-top: -38px;
-  z-index: -1;
+  z-index: 0;
 }
 .footer__container:before{
   position: absolute;
@@ -449,9 +459,10 @@ p {
   color: #fff;
   font-size: 14px;
   position: relative;
+  bottom: 0;
   display: flex;
   justify-content: space-between;
-  padding: 17px;
+  padding: 0 15px 15px;
 }
 
 .mail_adress{
@@ -471,26 +482,26 @@ p {
 
 
 @font-face{
-	font-family: 'OpenSans-Regular';
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'OpenSans-Regular';
+  font-weight: normal;
+  font-style: normal;
 
-	src: url('../fonts/opensans/OpenSans-Regular.ttf') format('truetype');
+  src: url('../fonts/opensans/OpenSans-Regular.ttf') format('truetype');
 }
 @font-face{
-	font-family: 'OpenSans-Bold';
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'OpenSans-Bold';
+  font-weight: normal;
+  font-style: normal;
 
-	src: url('../fonts/opensans/OpenSans-Bold.ttf') format('truetype');
+  src: url('../fonts/opensans/OpenSans-Bold.ttf') format('truetype');
 }
 
 @font-face{
-	font-family: 'PT_Mono-Regular';
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'PT_Mono-Regular';
+  font-weight: normal;
+  font-style: normal;
 
-	src: url('../fonts/PT_Mono/PT_Mono-Regular.ttf') format('truetype');
+  src: url('../fonts/PT_Mono/PT_Mono-Regular.ttf') format('truetype');
 }
 @font-face{
   font-family: 'PT_Mono-Bold';
