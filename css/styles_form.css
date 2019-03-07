@@ -64,7 +64,9 @@
   font-size: 14px;
   box-sizing: border-box;
   display: inline-block;
-  /*margin-top: 15px;*/
+}
+.check_btn:nth-child(2n+1){
+  margin-top: 10px;
 }
 .check_btn:hover{
   background-color: rgba(0,0,0, 0.4);
@@ -87,8 +89,8 @@
   font-family: PT_Mono-regular;
   font-size: 16px;
 }
-.selector:focus,
-.selector:hover {
+.selector:focus, .selector:hover
+#email-field:focus, #email-field:hover{
   border-color: #34CC99;
 }
 #email-field {
