@@ -60,6 +60,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .article_title {
@@ -133,6 +134,7 @@ p {
   font-size: 16px;
   margin-bottom: 15px;
   background-color: transparent;
+  text-align: center;
 }
 .btn:hover {
   color: #34CC99;
@@ -237,6 +239,7 @@ p {
   box-shadow: 0px 18px 0px -9px #000;
   padding: 16px 10px;
   margin-top: 30px;
+  background-color: #fff;
 }
 
 .chart_block{
@@ -265,14 +268,7 @@ p {
 
 
 
-.carusel{
-  background-image: url(../img/slide_2_mobile.jpg);
-  width: calc(100% - 34px);
-  height: calc(100vw - 100px);
-  max-height: 382px;
-  background-size: cover;
-  margin: 20px 17px;
-}
+
 .slider{
   width: 288px;
   height: 227px;
@@ -375,13 +371,12 @@ p {
   transform: translateY(6px);
 }
 
-.menu-btn:focus > .burger_lines{
+/* АНИМАЦИЯ БУРГЕРОВ */
+/*.menu-btn:focus > .burger_lines{
   transition: .5s all;
   background-color: transparent;
-  /*z-index: 5;*/
 }
-/* АНИМАЦИЯ БУРГЕРОВ */
-/*.menu-btn:focus > .burger_lines:before,
+.menu-btn:focus > .burger_lines:before,
 .menu-btn:focus > .burger_lines:after {
   width: 20px;
   transition: .5s all;
@@ -395,8 +390,8 @@ p {
   transform: rotate(-45deg);
 }*/
 
-.menu-btn:focus ~ .links,
-.menu-btn:hover ~ .links {
+.menu-btn:focus ~ .links, 
+.menu-btn:hover ~ .links { /*нужно для телефонов*/
   transition: .5s all;
   transform: translateX(100%);
 }

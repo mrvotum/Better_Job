@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/styles_form.css">
+	<title>form</title>
+</head>
+<body>
+<main class="content form__container">
+	<div class="top_holder">
+		<a href="index.html" class="btn_back">&#60;&#60;</a>
+	</div>
+
+	<div class="content__block form">
+		<div class="article__container left-align">
+			<div class="important_message__holder">
+				<p class="important_message">Заполните короткую форму, чтобы мы приготовили идеальное предложение</p>
+			</div>
+			<form action="#" method="post" enctype="multipart/form-data">
+
+				<label class="simple_label">
+					Меня зовут:<input type="text" name="name_person" id="name-field">
+				</label>
+
+				<div class="profession">
+					<p class="profession_label">Я</p>
+					<input class="invisible" type="checkbox" id="programmer">
+	    		<label class="check_btn" for="programmer" id="programmer_label">программист</label>
+	    		<input class="invisible" type="checkbox" id="designer">
+	    		<label class="check_btn" for="designer" id="designer_label">дизайнер</label>
+	    		<input class="invisible" type="checkbox" id="it_master">
+	    		<label class="check_btn" for="it_master" id="it_master_label">сисадмин</label>
+	    		<input class="invisible" type="checkbox" id="QA">
+	    		<label class="check_btn" for="QA" id="QA_label">QA</label>
+				</div>
+
+
+				<div class="countries">
+					<label class="simple_label" for="live_country-field">
+						<span>Я живу в</span>
+						<select class="selector" name="live_country" id="live_country-field">
+					    <option value="" >Выберете страну из списка</option>
+					    <option value="1">value 1</option>
+					    <option value="2">value 2</option>
+					    <option value="3">value 3</option>
+						</select>
+					</label>
+					<br>
+					<label class="simple_label" for="want_to_country-field">
+						<span>Хочу переехать в</span>
+						<select class="selector" name="want_to_country" id="want_to_country-field">
+					    <option value="" >Выберете страну из списка</option>
+					    <option value="1">value 1</option>
+					    <option value="2">value 2</option>
+					    <option value="3">value 3</option>
+						</select>
+					</label>
+				</div>
+
+
+				<label class="simple_label" for="email-field">
+					<span>Мой адрес для связи:</span>
+				</label>
+				<input type="text" name="email" id="email-field" placeholder="Введите Ваш Email">
+
+
+				
+	    	<label class="checkbox_holder" for="agree">Я согласен, чтобы мной начали интересоваться лучшие стартапы Европы
+					<input type="checkbox" id="agree">
+	    		<span class="checkmark"></span>
+	    	</label>
+
+	    	<label class="simple_label margin-bottom">
+					<span>Я даже готов </span><a href="#" onclick="document.getElementById('getFile').click()">загрузить</a><span> файл CV</span>
+  				<input type='file' id="getFile" style="display:none">
+				</label>
+
+				<input class="btn green" type="submit" value="Отправить">
+			</form>
+		</div>
+	</div>
+</main>
+</body>
+</html>
