@@ -395,7 +395,8 @@ p {
   transform: rotate(-45deg);
 }*/
 
-.menu-btn:focus ~ .links {
+.menu-btn:focus ~ .links,
+.menu-btn:hover ~ .links {
   transition: .5s all;
   transform: translateX(100%);
 }
