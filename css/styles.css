@@ -269,6 +269,30 @@ p {
 
 
 
+.radio-btn:checked + .radio-btn_visible {
+  background: #fff;
+  border: 0.3px solid #fff;
+  margin-bottom: 9.5px;
+}
+
+.radio-btn {
+  display: none;
+}
+  
+.radio-btn_visible {
+  height:5px;
+  width: 5px;
+  display: inline-block;
+  border-radius: 50%;
+  z-index: 2;
+  margin-bottom: 10px;
+  background-color: rgba(255,255,255, .5);
+}
+.radio-btn_visible:nth-child(n+4):nth-child(even) {
+  /* Выделяются чётные элементы, начиная с 4-го */
+  margin-left: 7px;
+}
+
 .slider{
   width: 288px;
   height: 227px;
@@ -276,6 +300,8 @@ p {
   margin: auto;
   position: relative;
   display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 .slide{
   width: 100%;
@@ -286,6 +312,7 @@ p {
   background-size: cover;
   position: absolute;
 }
+
 #num1{
   background-image: url(../img/slide_1.png);
   opacity: 0;
@@ -307,18 +334,6 @@ p {
   opacity: 0;
 }
 
-.radio-btn{
-  bottom: 10px;
-  opacity: 0.8;
-  z-index: 2;
-  margin-top: 71%;
-  margin-left: -2px;
-}
-.radio-btn:nth-child(1){
-  margin-left: 107px;
-}
-
-
 #slide_1:checked ~ #num1{
   opacity: 1;
 }
@@ -334,7 +349,6 @@ p {
 #slide_5:checked ~ #num5{
   opacity: 1;
 }
-
 
 
 
