@@ -1,3 +1,7 @@
+.article_title{
+  display: none;
+}
+
 .btn_back{
   color: #34CC99;
   text-decoration: none;
@@ -100,6 +104,7 @@
 
 .selector > option {
   height: 45px;
+  width: 290px;
 }
 .selector > option:hover,
 .selector > option:focus {
