@@ -162,6 +162,8 @@ p {
   border-color: #fff;
   background-color: #fff;
   box-shadow: 7px 7px 0px #000;
+  margin-bottom: 0;
+  margin-top: 50px;
 }
 .btn.white:hover {
   color: #fff;
@@ -196,10 +198,10 @@ p {
 
 
 .about_program {
-  background: url(../img/Bundesarchiv_mobile.png) no-repeat;
+  /*background: url(../img/Bundesarchiv_mobile.png) no-repeat;
   background-size: cover;
   top: 0;
-  background-color: #696969;
+  background-color: #696969;*/
   position: relative;
 }
 .about_program:before {
@@ -213,6 +215,17 @@ p {
 
 .about_program > .article__container{
   position: relative;
+}
+
+.img_holder{
+  background: url(../img/Bundesarchiv_mobile.png) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 99%;
+  position: absolute;
+  top: 0;
+  background-color: #696969;
+  z-index: -1;
 }
 
 .article_text {
@@ -243,27 +256,31 @@ p {
 }
 
 .chart_block{
-  position: relative;
   width: 280px;
   padding: 12px 40px;
   box-sizing: border-box;
   margin-top: 24px;
+  text-align: center;
   display: flex;
   justify-content: center;
-  text-align: center;
 }
-.chart_block:before{
+/*.chart_block:nth-child(n+4):nth-child(-n+6):before { /* с 3 по 5
+  top: 6px;
+}*/
+.chart_block > p{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chart_block > p:before{
   position: absolute;
   counter-increment: listNumber; /* Увеличиваем значение счетчика */
   content: counter(listNumber); /* Выводим число */
   font-size: 48px;
   font-family: 'PT_Mono-Bold';
   color: #34CC99;
-  top: -4px;
   z-index: -1;
-}
-.chart_block:nth-child(n+4):nth-child(-n+6):before { /* с 3 по 5 */
-  top: 6px;
 }
 
 
