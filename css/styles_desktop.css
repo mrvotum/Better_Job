@@ -73,6 +73,10 @@
 		margin-bottom: 100px;
 	}
 
+	.left-align{
+		padding: 62px 86px; 
+	}
+
 	.about_program > .article__container{
 		width: 50%;
 		background-color: #34CC99;
