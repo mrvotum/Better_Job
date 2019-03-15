@@ -135,6 +135,7 @@ p {
   margin-bottom: 15px;
   background-color: transparent;
   text-align: center;
+  cursor: pointer;
 }
 .btn:hover {
   color: #34CC99;
@@ -239,6 +240,10 @@ p {
 }
 
 
+.why_berlin > .article__container > .button__container{
+  display: none;
+}
+
 
 .charts__holder{
   counter-reset: listNumber;
@@ -305,6 +310,7 @@ p {
   z-index: 2;
   margin-bottom: 10px;
   background-color: rgba(255,255,255, .5);
+  cursor: pointer;
 }
 .radio-btn_visible:nth-child(n+4):nth-child(even) {
   /* Выделяются чётные элементы, начиная с 4-го */
@@ -404,31 +410,34 @@ p {
 }
 
 /* АНИМАЦИЯ БУРГЕРОВ */
-/*.menu-btn:focus > .burger_lines{
+.menu-btn_active > .burger_lines{
   transition: .5s all;
   background-color: transparent;
+  z-index: 10;
 }
-.menu-btn:focus > .burger_lines:before,
-.menu-btn:focus > .burger_lines:after {
+.menu-btn_active > .burger_lines:before,
+.menu-btn_active > .burger_lines:after {
   width: 20px;
   transition: .5s all;
   margin-left: 5px;
   border-radius: 50px;
 }
-.menu-btn:focus > .burger_lines:after{
+.menu-btn_active > .burger_lines:after{
   transform: rotate(45deg);
 }
-.menu-btn:focus > .burger_lines:before {
+.menu-btn_active > .burger_lines:before {
   transform: rotate(-45deg);
-}*/
+}
+/* АНИМАЦИЯ БУРГЕРОВ */
 
-.menu-btn:focus ~ .links, 
-.menu-btn:hover ~ .links { /*нужно для телефонов*/
-  transition: .5s all;
-  transform: translateX(100%);
+.links_active {
+  opacity: 1!important;
+  transition-property: transform;
+  transition-duration: .5s;
+  transform: translateX(-100%);
 }
 
-.links{
+.links{ 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -438,8 +447,9 @@ p {
   width: 100vw;
   height: 100vh;
   z-index: 4;
-  left: -100vw;
+  left: 100vw;  
   top: 0;
+  opacity: 0;
   transition: .5s all;
 }
 .links > a{
@@ -497,7 +507,6 @@ p {
   text-decoration: none;
   color: #fff;
 }
-
 
 
 

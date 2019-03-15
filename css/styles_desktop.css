@@ -7,28 +7,48 @@
 		font-size: 72px;
 	}
 
+	.header {
+		background-image: url(../img/tower_desktop.png);
+	}
+
 	.top_holder{
 		padding-left: 46px;
 		padding-right: 40px;
 	}
 
 	.icons_holder {
-		margin-top: 360px;
+		margin-top: 35vh; /*25%; 360px*/
 		justify-content: center;
 	}
 	.icons_holder > svg {
-		width: 80px;
+		width: 5.56%;
 	}
 	.icons_holder > svg:not(:first-child) {
-		padding-left: 77px;
+		padding-left: 5.3%;
+	}
+
+	.header__container::after,
+	.header__container::before{
+		content: 'V';		
+		left: 50%;
+		color: #000;
+		font-weight: 700;
+		position: absolute;
+		font-size: 24px;
+	}
+  .header__container::after{
+		bottom: -4px;
+  }
+	.header__container::before{
+		bottom: -24px;
 	}
 
 	.header__container > .article__container{
-		margin-top: 160px;
+		margin-top: 11%;
 	}
 
 	.article__container > .description_text.headers {
-		padding: 32px 450px;
+		padding: 32px 31.25%;
 	}
 
 	.description_text.headers{
@@ -37,6 +57,10 @@
 	
 	.button__container > form {
 		align-items: flex-start;
+	}
+	
+	.header__container > .button__container > form {
+		margin-top: 2.15%;
 	}
 
 	.header__container > .button__container > form {
@@ -48,7 +72,7 @@
 		margin-right: 40px;
 	}
 	.btn{
-		margin-bottom: 69px;
+		margin-bottom: 4.8%;
 	}
 	
 
@@ -75,6 +99,10 @@
 
 	.left-align{
 		padding: 62px 86px; 
+	}
+
+	.about_program > .article__container > .article_title{
+		margin-left: -90px;
 	}
 
 	.about_program > .article__container{
@@ -104,6 +132,10 @@
 		left: 50%;
 	}
 
+	.how_it_works > .button__container{
+		padding-left: 133px;
+	}
+
 	.why_berlin{
 		display: flex;
 	}
@@ -119,11 +151,26 @@
 		margin-left: -90px;
 	}
 
+	.why_berlin > .article__container > .button__container{
+		display: block;
+		margin-top: 54px;
+		position: relative;
+	}
+	.why_berlin > .article__container > .button__container::before{
+		content: '_ _ _';
+		position: absolute;
+		color: #34CC99;
+		font-weight: 700;
+		left: -40px;
+		top: 10px;
+	}
+
 	.slider{
 		width: 486px;
 		height: 382px;
-		margin: 41px 0px 41px 140px;
+		margin: 148px 0px 41px 140px;
 		position: relative;
+		box-sizing: border-box;
 	}
 	.slider:before{
 		content: '+';
@@ -141,4 +188,29 @@
 	}
 
 
+	.the_crew > .article__container{
+		padding-right: 800px;
+	}
+	.the_crew > .article__container > .article_text{
+		padding-top: 170px;
+		padding-left: 66px;
+	}
+
+	.the_crew > .button__container{
+		padding-left: 140px;
+	}
+
+	.footer__container {
+		padding-top: 710px;
+		margin-top: -400px;
+		/*z-index: -1;*/
+	}
+	.footer__container::before {
+		background: linear-gradient(180deg, #fff, transparent 120%);
+		top: -1px;
+	}
+
+	.inf_holder{
+		padding: 0 40px 45px;
+	}
 }
