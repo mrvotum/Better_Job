@@ -1,5 +1,5 @@
 body {
-  font-family: PT_Mono-Regular;
+  font-family: OpenSans-Regular;
   padding: 0;
   margin: 0;
   position: relative;
@@ -34,6 +34,7 @@ p {
   background-image: url(../img/tower_mobile.jpg);
   background-size: cover;
   background-color: #696969;
+  padding-bottom: 19px;
 }
 .header:before {
   position: absolute;
@@ -94,21 +95,24 @@ p {
 .icons_holder {
   padding-left: 55px;
   padding-right: 55px;
-  margin-top: 115px;
+  margin-top: 110px;
   width: 100%;
   box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .icons_holder > svg {
-  fill: #fff;
-  width: 33px;
+  fill: #34CC99;
+  width: 26px;
+}
+.icons_holder > svg:not(:first-child) {
+  padding-left: 23px;
 }
 
 .article__container {
   text-align: center;
-  margin-top: 65px;
+  margin-top: 60px;
 }
 .article__container > .description_text.headers {
   padding: 10px 40px;
@@ -122,6 +126,18 @@ p {
   flex-direction: column;
   align-items: center;
 }
+.header__container > .article__container > h1{
+  position: relative;
+}
+.header__container > .article__container > h1::after{
+  position: absolute;
+  right: 12px;
+  top: 11px;
+  font-size: 16px;
+  content: '///';
+  color: #34CC99;
+}
+
 
 .btn {
   border: solid black 2px;
@@ -177,8 +193,10 @@ p {
 }
 
 
-
-
+.concepts{
+  padding-top: 34px;
+  padding-bottom: 34px;
+}
 .concepts > .article__container {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -189,9 +207,7 @@ p {
   fill: #34CC99;
   width: 40px;
 }
-/*.article__container > .description_text {
-  padding: 0 11px;
-}*/
+
 
 .description_title {
   margin: 5px 0;
@@ -217,6 +233,11 @@ p {
 .about_program > .article__container{
   position: relative;
 }
+
+.about_program > .article__container > .button__container{
+  display: none;
+}
+
 
 .img_holder{
   background: url(../img/Bundesarchiv_mobile.png) no-repeat;
@@ -245,6 +266,28 @@ p {
 }
 
 
+
+.the_crew{
+  background-image: url(../img/hands_mobile.jpg);
+  background-size: cover;
+  background-position: ;
+  position: relative;
+  height: 220px;
+  bottom: 0;
+  left: 0;
+}
+/*.the_crew:before{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.65);
+  top: 0;
+}
+*/
+
+
+
 .charts__holder{
   counter-reset: listNumber;
   display: flex;
@@ -263,9 +306,9 @@ p {
 
 .chart_block{
   width: 280px;
-  padding: 12px 40px;
+  padding: 30px 60px 16px;
   box-sizing: border-box;
-  margin-top: 24px;
+  margin-top: 20px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -278,6 +321,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 30px;
 }
 .chart_block > p:before{
   position: absolute;
@@ -286,7 +330,7 @@ p {
   font-size: 48px;
   font-family: 'PT_Mono-Bold';
   color: #34CC99;
-  z-index: -1;
+  top: -28px;
 }
 
 
@@ -312,8 +356,8 @@ p {
   background-color: rgba(255,255,255, .5);
   cursor: pointer;
 }
-.radio-btn_visible:nth-child(n+4):nth-child(even) {
-  /* Выделяются чётные элементы, начиная с 4-го */
+.radio-btn_visible:nth-child(n+4):nth-child(odd) {
+  /* Выделяются нечётные элементы, начиная с 4-го */
   margin-left: 7px;
 }
 
@@ -374,6 +418,38 @@ p {
   opacity: 1;
 }
 
+.btn_arrows__holder{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+}
+
+.btn_arrow{
+  width: 20%;
+  height: 100%;
+  position: relative;
+}
+.btn_arrow::before{
+  content: '';
+  position: absolute;
+  top: calc(50% - 72px / 2);
+  font-family: OpenSans-Regular;
+  font-size: 72px;
+  color: rgba(255, 255, 255, .3);
+}
+#btn_left::before{
+  content: '<';
+  right: 9px;
+}
+#btn_right::before{
+  content: '>';
+  left: 9px;
+}
+
 
 
 
@@ -385,7 +461,8 @@ p {
 .menu-btn{
   width: 29px;
   height: 20px;
-  display: block;
+  display: flex;
+  align-items: center;
   position: relative;
 }
 .menu-btn .burger_lines,
@@ -395,18 +472,18 @@ p {
   background-color: #000;
   width: 29px;
   height: 2px;
-  top: calc(50% - 1px); /* margin-top: -1px; /* половина от высоты */
-  left: calc(50% - 14.5px); /* margin-left: -14.5px; /* половина от ширины */
+  /*top: calc(50% - 1px);*/ /* margin-top: -1px; /* половина от высоты */
+  /*left: calc(50% - 14.5px);*/ /* margin-left: -14.5px; /* половина от ширины */
 }
 .menu-btn .burger_lines::before,
 .menu-btn .burger_lines::after {
   content: '';
 }
 .menu-btn .burger_lines::before{
-  transform: translateY(-6px);
+  transform: translateY(-7px);
 }
 .menu-btn .burger_lines::after{
-  transform: translateY(6px);
+  transform: translateY(7px);
 }
 
 /* АНИМАЦИЯ БУРГЕРОВ */
@@ -414,6 +491,7 @@ p {
   transition: .5s all;
   background-color: transparent;
   z-index: 10;
+  position: fixed;
 }
 .menu-btn_active > .burger_lines:before,
 .menu-btn_active > .burger_lines:after {
@@ -475,23 +553,22 @@ p {
 
 
 .footer__container{
-  background-image: url(../img/hands_mobile.jpg);
-  background-size: cover;
+  /*background-image: url(../img/hands_mobile.jpg);
+  background-size: cover;*/
   font-family: OpenSans-regular;
-  padding-top: 220px;
+  /*padding-top: 220px;
   position: relative;
-  margin-top: -38px;
-  z-index: 0;
+  margin-top: -38px;*/
+  /*z-index: 0;*/
 }
-.footer__container:before{
+/*.footer__container:before{
   position: absolute;
   content: '';
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.65);
-  /*background: linear-gradient(180deg, #fff, transparent 120%);*/
   top: 0;
-}
+}*/
 
 .inf_holder{
   color: #fff;
@@ -523,14 +600,14 @@ p {
   font-weight: normal;
   font-style: normal;
 
-  src: url('../fonts/opensans/OpenSans-Regular.ttf') format('truetype');
+  src: url('../fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype');
 }
 @font-face{
   font-family: 'OpenSans-Bold';
   font-weight: normal;
   font-style: normal;
 
-  src: url('../fonts/opensans/OpenSans-Bold.ttf') format('truetype');
+  src: url('../fonts/Open_Sans/OpenSans-Bold.ttf') format('truetype');
 }
 
 @font-face{

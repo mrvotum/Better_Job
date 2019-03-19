@@ -200,15 +200,23 @@
 		padding-left: 140px;
 	}
 
+	.bgi_holder{
+		background-image: url(../img/hands_mobile.jpg);
+		background-size: cover;
+		font-family: OpenSans-regular;
+		width: 100%;
+	}
+
 	.footer__container {
-		padding-top: 710px;
-		margin-top: -400px;
+		/*padding-top: 710px;
+		margin-top: -400px;*/
+		background-image: none;
 		/*z-index: -1;*/
 	}
-	.footer__container::before {
+	/*.footer__container::before {
 		background: linear-gradient(180deg, #fff, transparent 120%);
 		top: -1px;
-	}
+	}*/
 
 	.inf_holder{
 		padding: 0 40px 45px;

@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="css/styles_radio_btn.css">
 	<link rel="stylesheet" href="css/styles_desktop.css">
-	<!-- <link rel="stylesheet" href="css/charts.css"> -->
+	<link rel="stylesheet" href="css/charts.css">
 	<!-- <script src="//code.jquery.com/jquery-3.2.1.min.js"></script> -->
 	<title>betterjob</title>
 </head>
@@ -76,7 +76,7 @@
 	<div class="content__block about_program" id="about_program">
 		<div class="article__container left-align">
 			<h2 class="article_title">О программе</h2>
-			<p class="article_text">Европе нужны IT-профессионалы, вменяемые и работоспособные люди. Мы умеем находить для таких людей новое лучшее место для работы и жизни. Платят нам за это работодатели, а не кандидаты.</p>
+			<p class="article_text">Европе нужны IT-профессионалы, вменяемые и работоспособные люди. Мы умеем и любим находить для таких людей новое лучшее место для работы и жизни. Платят нам за это работодатели, а не кандидаты.</p>
 			<div class="button__container">
 				<form action="">
 					<a href="form.html" class="btn white">Получить предложение</a>
@@ -90,23 +90,51 @@
 		<div class="article__container left-align">
 			<h2 class="article_title">Как это работает</h2>
 			<div class="charts__holder">
-				<div class="important_message__holder">
-					<p class="important_message"><strong>Важно!</strong> Мы не работаем с рекрутёрами, эйчарами и так далее. Вы будете говорить только с техническими людьми</p>
+				<div class="chart__block_holder" id="block_1">
+					<div class="important_message__holder">
+						<p class="important_message">Важно! Мы не работаем с рекрутёрами, эйчарами и так далее. Вы будете говорить только с техническими людьми</p>
+					</div>
 				</div>
-				<div class="chart_block">
-					<p>Заполните форму</p>
+				<div class="chart__block_holder" id="block_2">
+					<div class="chart_block">
+						<p>Заполните форму</p>
+					</div>
+					<div class="chart_block">
+						<p>Разговор по скайпу</p>
+					</div>
+	
+					<div class="arrow__container">
+						<div class="arrow-body">
+							<span class="arrow_left"></span>
+							<span class="arrow_right"></span>
+						</div>
+					</div>
+
+					<div class="chart_block">
+						<p>Рекомендации по оформлению CV</p>
+					</div>
+					<div class="chart_block">
+						<p>Несколько проектов на выбор</p>
+					</div>
+
+					<div class="arrow__container">
+						<div class="arrow-body">
+							<span class="arrow_left"></span>
+							<span class="arrow_right"></span>
+						</div>
+					</div>
 				</div>
-				<div class="chart_block">
-					<p>Созвонитесь с нами по скайпу</p>
-				</div>
-				<div class="chart_block">
-					<p>Пройдите собеседование</p>
-				</div>
-				<div class="chart_block">
-					<p>Получите оффер</p>
-				</div>
-				<div class="chart_block">
-					<p>Соберите чемоданы</p>
+
+				<div class="chart__block_holder" id="block_3">
+					<div class="chart_block">
+						<p>Интервью с потенциальным лицом</p>
+					</div>
+					<div class="chart_block">
+						<p>Оффер</p>
+					</div>
+					<div class="chart_block">
+						<p>Переезд</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -128,10 +156,6 @@
 			</div>
 		</div>
 		<div class="slider">
-			<div class="btn_arrows__holder">
-				<div class="btn_arrow" id="btn_left" onclick="slide_left()"></div>
-				<div class="btn_arrow" id="btn_right" onclick="slide_right()"></div>
-		    </div>
 			<input class="radio-btn" type="radio" name="s" id="slide_1">
 			<label class="radio-btn_visible" for="slide_1"></label>
 
